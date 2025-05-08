@@ -1,6 +1,6 @@
 #include <xmotion.h>
 
-int Start = 14.8;
+int Start = 10;
 
 int QTI[] = {A4, A2, A1};
 int QTIvalue[] = {0, 0, 0}; //0 = black, 1 = white
@@ -18,6 +18,7 @@ bool timePassed = true;
 String space = " ";
 
 void setup() {
+  pinMode(Start, INPUT_PULLUP);
   Serial.begin(9600);
   pinMode(A4,INPUT);pinMode(A2,INPUT);pinMode(A1,INPUT);
   pinMode(A5, INPUT);pinMode(4, INPUT);pinMode(2, INPUT);pinMode(1, INPUT);pinMode(0, INPUT);
